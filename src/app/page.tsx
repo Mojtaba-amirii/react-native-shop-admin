@@ -131,6 +131,7 @@ export default function Home() {
                   width={1331}
                   height={888}
                   src="/app-pics.png"
+                  priority
                   alt="GadgetApp Screenshot"
                   className="rounded-3xl object-cover shadow-2xl mx-auto h-[500px] w-[250px]"
                 />

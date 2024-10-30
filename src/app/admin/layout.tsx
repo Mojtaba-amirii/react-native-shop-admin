@@ -4,7 +4,6 @@ import { RenderMounted } from "@/components/render-mounted";
 import { ADMIN } from "@/constants/constants";
 
 import { createClient } from "@/supabase/server";
-import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { ReactNode } from "react";
 
@@ -29,10 +28,7 @@ export default async function AdminLayout({
       return;
     }
 
-    if (data.type === ADMIN) {
-      revalidatePath("/admin/dashboard", "layout");
-      return redirect("/");
-    }
+    if (data.type === ADMIN) return redirect("/");
   }
 
   return (
