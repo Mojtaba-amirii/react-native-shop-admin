@@ -23,3 +23,17 @@ export const Footer = () => (
     </div>
   </footer>
 );
+
+export const Footer2 = () => {
+  return (
+    <footer className="bg-[#1BC464] text-white">
+      <Link
+        href={`https://mojtaba-amirii-portfolio.vercel.app/`}
+        target="_blank"
+        className="container mx-auto px-4 text-center"
+      >
+        <p>@ codewithmuji</p>
+      </Link>
+    </footer>
+  );
+};
