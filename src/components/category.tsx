@@ -87,7 +87,7 @@ export const CategoryTableRow = ({
                 <ScrollArea className="h-[400px] rounded-md p-4">
                   {category.products.map((product) => (
                     <Card key={product.id}>
-                      <div className="grid grid-cols-[100px,1fr] items-center gap-4">
+                      <div className="grid grid-cols-[100px_1fr] items-center gap-4">
                         <Image
                           alt="Product image"
                           className="aspect-square rounded-md object-cover"
