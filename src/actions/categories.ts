@@ -16,7 +16,7 @@ export const getCategoriesWithProducts =
     const { data, error } = await supabase
       .from("category")
       .select("* , products:product(*)")
-      .returns<CategoriesWithProductsResponse>();
+      .overrideTypes<CategoriesWithProductsResponse, { merge: false }>();
 
     if (error) throw new Error(`Error fetching categories: ${error.message}`);
 
