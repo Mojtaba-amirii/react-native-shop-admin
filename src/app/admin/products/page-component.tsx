@@ -1,12 +1,12 @@
 "use client";
 
+import { toast } from "sonner";
+import { v4 as uuid } from "uuid";
 import { FC, useState } from "react";
 import { PlusIcon } from "lucide-react";
-import { v4 as uuid } from "uuid";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
-import { toast } from "sonner";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import { ProductsWithCategoriesResponse } from "@/app/admin/products/products.types";
 import { Button } from "@/components/ui/button";
@@ -105,8 +105,10 @@ export const ProductPageComponent: FC<Props> = ({
       }
     }
 
-    if (images.length > 0) {
-      const imagesPromises = Array.from(images).map((file) => uploadFile(file));
+    if ((images ?? []).length > 0) {
+      const imagesPromises = Array.from(images ?? []).map((file) =>
+        uploadFile(file)
+      );
 
       try {
         imageUrls = (await Promise.all(imagesPromises)) as string[];

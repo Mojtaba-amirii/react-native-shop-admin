@@ -14,7 +14,10 @@ export const createOrUpdateProductSchema = z.object({
       (files: FileList | null) => files instanceof FileList && files.length > 0,
       { message: "At least one image is required" }
     )
-    .transform((files: FileList | null) => (files ? Array.from(files) : [])),
+    .transform((files: FileList | null) => (files ? Array.from(files) : []))
+    .default([])
+    .optional(),
+
   intent: z
     .enum(["create", "update"], {
       message: "Intent must be either create or update",
