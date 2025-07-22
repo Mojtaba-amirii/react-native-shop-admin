@@ -78,6 +78,7 @@ export const ProductTableRow = ({
               images: [],
               slug: product.slug,
               intent: "update",
+              heroImage: undefined,
             })
           }
         >
@@ -95,6 +96,7 @@ export const ProductTableRow = ({
               images: [],
               slug: product.slug,
               intent: "update",
+              heroImage: product.heroImage,
             });
             setIsDeleteModalOpen(true);
           }}

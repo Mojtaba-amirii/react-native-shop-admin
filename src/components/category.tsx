@@ -125,7 +125,11 @@ export const CategoryTableRow = ({
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() =>
-                  handleEditClick({ ...category, intent: "update" })
+                  handleEditClick({
+                    ...category,
+                    intent: "update",
+                    image: undefined,
+                  })
                 }
               >
                 Edit
