@@ -90,9 +90,13 @@ const PageComponent = ({
                   outerRadius={80}
                   fill="#8884d8"
                   labelLine={false}
-                  label={({ name, percent }) =>
-                    `${name} ${((percent ?? 0) * 100).toFixed(0)}%`
-                  }
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  label={(props: any) => {
+                    const { name, percent } = props;
+                    return `${name || ""} ${((percent ?? 0) * 100).toFixed(
+                      0
+                    )}%`;
+                  }}
                 >
                   {categoryData.map((_entry, index) => (
                     <Cell
