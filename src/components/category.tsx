@@ -121,7 +121,7 @@ export const CategoryTableRow = ({
                 <span className="sr-only">Open menu</span>
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-[160px]">
+            <DropdownMenuContent align="end" className="w-40">
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() =>

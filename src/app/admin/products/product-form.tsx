@@ -1,5 +1,5 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
 import { UseFormReturn } from "react-hook-form";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
 import {
   Form,
@@ -23,10 +23,10 @@ import {
   DialogTitle,
   DialogFooter,
 } from "@/components/ui/dialog";
-import { CreateOrUpdateProductSchema } from "@/app/admin/products/schema";
 import { Input } from "@/components/ui/input";
-import { Category } from "@/app/admin/categories/categories.types";
 import { Button } from "@/components/ui/button";
+import { Category } from "@/app/admin/categories/categories.types";
+import { CreateOrUpdateProductSchema } from "@/app/admin/products/schema";
 
 type Props = {
   form: UseFormReturn<CreateOrUpdateProductSchema>;

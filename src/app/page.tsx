@@ -1,8 +1,8 @@
 "use client";
 
-import { ReactNode, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { ReactNode, useState } from "react";
 import {
   ChevronRight,
   Star,
@@ -12,9 +12,9 @@ import {
   Gift,
 } from "lucide-react";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 interface MotionWrapperProps {
   children: ReactNode;

@@ -1,6 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-import { Pencil, Trash2 } from "lucide-react";
 import Image from "next/image";
+import { Pencil, Trash2 } from "lucide-react";
+import { Dispatch, SetStateAction } from "react";
 
 import { Button } from "@/components/ui/button";
 import { TableRow, TableCell } from "@/components/ui/table";

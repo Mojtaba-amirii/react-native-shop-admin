@@ -1,5 +1,6 @@
-import { createClient } from "@/supabase/server";
 import { QueryData } from "@supabase/supabase-js";
+
+import { createClient } from "@/supabase/server";
 
 const supabase = createClient();
 /* eslint-disable @typescript-eslint/no-unused-vars */

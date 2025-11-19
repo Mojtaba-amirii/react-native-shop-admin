@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { format } from "date-fns";
-import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 

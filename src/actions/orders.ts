@@ -1,7 +1,7 @@
 "use server";
 
-import { createClient } from "@/supabase/server";
 import { revalidatePath } from "next/cache";
+import { createClient } from "@/supabase/server";
 import { sendNotification } from "./notifications";
 
 export const getOrdersWithProducts = async () => {

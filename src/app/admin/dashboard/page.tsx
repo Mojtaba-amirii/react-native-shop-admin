@@ -1,7 +1,7 @@
-import { getMonthlyOrders } from "@/actions/orders";
 import PageComponent from "./page-component";
-import { getCategoryData } from "@/actions/categories";
 import { getLatestUsers } from "@/actions/auth";
+import { getMonthlyOrders } from "@/actions/orders";
+import { getCategoryData } from "@/actions/categories";
 
 const AdminDashboard = async () => {
   const monthlyOrders = await getMonthlyOrders();

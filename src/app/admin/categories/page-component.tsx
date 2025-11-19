@@ -1,13 +1,17 @@
 "use client";
 
-import { FC, useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { PlusCircle } from "lucide-react";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
 import { v4 as uuid } from "uuid";
+import { FC, useState } from "react";
+import { PlusCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
+import { CategoryTableRow } from "@/components/category";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CategoriesWithProductsResponse } from "@/app/admin/categories/categories.types";
 import {
   Dialog,
   DialogContent,
@@ -22,14 +26,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useRouter } from "next/navigation";
-
-import { CategoryTableRow } from "@/components/category";
 import {
   createCategorySchema,
   CreateCategorySchema,
 } from "@/app/admin/categories/create-category.schema";
-import { CategoriesWithProductsResponse } from "@/app/admin/categories/categories.types";
 import { CategoryForm } from "@/app/admin/categories/category-form";
 import {
   createCategory,
@@ -37,7 +37,6 @@ import {
   imageUploadHandler,
   updateCategory,
 } from "@/actions/categories";
-import { toast } from "sonner";
 
 type Props = {
   categories: CategoriesWithProductsResponse;
