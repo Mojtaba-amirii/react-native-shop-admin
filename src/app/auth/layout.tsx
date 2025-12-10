@@ -1,8 +1,8 @@
-import { createClient } from "@/supabase/server";
-import { redirect } from "next/navigation";
 import { ReactNode } from "react";
+import { redirect } from "next/navigation";
 
 import { ADMIN } from "@/constants/constants";
+import { createClient } from "@/supabase/server";
 
 export default async function AuthLayout({
   children,

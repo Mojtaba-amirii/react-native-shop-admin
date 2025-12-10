@@ -1,5 +1,11 @@
 "use client";
 
+import { z } from "zod";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import { authenticate } from "@/actions/auth";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,11 +17,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 const loginSchema = z.object({
   email: z.email({ message: "Invalid email address" }),

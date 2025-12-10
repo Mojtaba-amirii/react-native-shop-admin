@@ -1,14 +1,14 @@
 "use server";
 
 import slugify from "slugify";
+import { revalidatePath } from "next/cache";
 
-import { CategoriesWithProductsResponse } from "@/app/admin/categories/categories.types";
+import { createClient } from "@/supabase/server";
 import {
   CreateCategorySchemaServer,
   UpdateCategorySchema,
 } from "@/app/admin/categories/create-category.schema";
-import { createClient } from "@/supabase/server";
-import { revalidatePath } from "next/cache";
+import { CategoriesWithProductsResponse } from "@/app/admin/categories/categories.types";
 
 export const getCategoriesWithProducts =
   async (): Promise<CategoriesWithProductsResponse> => {
