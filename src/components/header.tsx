@@ -97,7 +97,7 @@ export const Header = () => {
             <Input
               type="search"
               placeholder="Search products..."
-              className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
+              className="pl-8 sm:w-75 md:w-50 lg:w-75"
             />
           </div>
         </form>

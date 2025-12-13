@@ -52,7 +52,7 @@ export default function Auth() {
 
   return (
     <div className="flex h-svh items-center justify-center">
-      <div className="mx-auto grid w-[350px] gap-6">
+      <div className="mx-auto grid w-87.5 gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4">
             <FormField

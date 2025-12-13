@@ -169,10 +169,10 @@ const CategoryPageComponent: FC<Props> = ({ categories }) => {
         </CardHeader>
 
         <CardContent>
-          <Table className=" min-w-[600px]">
+          <Table className=" min-w-150">
             <TableHeader>
               <TableRow>
-                <TableHead className=" w-[100px] sm:table-cell">
+                <TableHead className=" w-25 sm:table-cell">
                   <span className=" sr-only">Image</span>
                 </TableHead>
                 <TableHead>Name</TableHead>

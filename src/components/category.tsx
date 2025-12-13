@@ -84,7 +84,7 @@ export const CategoryTableRow = ({
                   Category product list
                 </DialogTitle>
                 <h2>Products</h2>
-                <ScrollArea className="h-[400px] rounded-md p-4">
+                <ScrollArea className="h-100 rounded-md p-4">
                   {category.products.map((product) => (
                     <Card key={product.id}>
                       <div className="grid grid-cols-[100px_1fr] items-center gap-4">
